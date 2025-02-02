@@ -11,10 +11,11 @@ const HomePage = () => {
 
     return (
         <div className="cafe-homepage">
-            <h1>Welcome to Webcafe AI</h1>
-            <p>Your go-to solution for AI-driven web applications.</p>
+            <h1>Henry Capital</h1>
+            <p>Flexible liquidity for emerging GPs</p>
             <div className={`cafe-color-box ${isBlue ? 'cafe-blue' : 'cafe-red'}`}></div>
             <button className="cafe-button" onClick={toggleColor}>Change Color</button>
+
         </div>
     );
 };
