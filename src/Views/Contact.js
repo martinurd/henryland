@@ -41,14 +41,14 @@ const Contact = () => {
             <div className="max-w-4xl mx-auto">
                 <div className="bg-black/20 backdrop-blur-sm p-8 rounded-lg">
                     <div className="max-w-2xl mx-auto">
-                        <h2 className="text-2xl font-bold text-white mb-5 text-center">Send us a message</h2>
+                        <h2 className="text-2xl font-bold text-black mb-5 text-center">Send us a message</h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <input
                                     type="text"
                                     value={subject}
                                     onChange={(e) => setSubject(e.target.value)}
-                                    className="w-full px-3 py-2 bg-white/15 border border-white/20 rounded-md text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
+                                    className="w-full px-3 py-2 bg-white/15 border border-white/20 rounded-md text-black placeholder-black/60 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
                                     placeholder="Subject (optional)"
                                     disabled={status === 'sending'}
                                 />
@@ -58,7 +58,7 @@ const Contact = () => {
                                     type="email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-3 py-2 bg-white/15 border border-white/20 rounded-md text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
+                                    className="w-full px-3 py-2 bg-white/15 border border-white/20 rounded-md text-black placeholder-black/60 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
                                     placeholder="Your email (optional)"
                                     disabled={status === 'sending'}
                                 />
@@ -68,7 +68,7 @@ const Contact = () => {
                                     rows="7"
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
-                                    className="w-full px-3 py-1 bg-white/15 border border-white/20 rounded-md text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="w-full px-3 py-1 bg-white/15 border border-white/20 rounded-md text-black placeholder-black/80 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     placeholder="Your message"
                                     required
                                     disabled={status === 'sending'}

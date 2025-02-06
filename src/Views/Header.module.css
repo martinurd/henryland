@@ -15,6 +15,21 @@
     margin-right: calc(var(--original-padding, 2px) * 0.1);
 }
 
+.headerAbsolute {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 50 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+.headerContent {
+    padding: 1rem 0.75rem !important;
+}
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;

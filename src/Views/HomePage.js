@@ -5,13 +5,14 @@ import Header from './Header';
 import SecondSection from './SecondSection';
 import ThirdSection from './ThirdSection';
 import FourthSection from './FourthSection';
-import FifthSection from './FifthSection';
 import AboutSection from './AboutSection';
 import Contact from './Contact';
 import Footer from './Footer';
 import backgroundVideo from '../Assets/Videos/backgroundvideo.mp4';
 import ContactModal from '../Components/ContactModal';
 import Divider from '../Components/Divider';
+import ExperienceSection from './ExperienceSection';
+import ExperienceSection2 from './ExperienceSection2';
 
 const HomePage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,14 +47,16 @@ const HomePage = () => {
     };
 
     return (
-        <main className="w-full">
+        <main className="w-full font-garamond">
             {/* Hero Section with Video */}
-            <section className="relative h-screen w-full overflow-hidden">
+            <section className="relative h-[80dvh] w-full overflow-hidden bg-[#013220]">
                 <video 
                     autoPlay 
                     muted 
                     loop 
+                    playsInline
                     className="absolute inset-0 w-full h-full object-cover"
+                    style={{ opacity: 0.7 }}
                 >
                     <source src={backgroundVideo} type="video/mp4" />
                     Your browser does not support the video tag.
@@ -63,27 +66,27 @@ const HomePage = () => {
                 <div 
                     className="absolute bottom-0 left-0 right-0 h-32" 
                     style={{
-                        background: 'linear-gradient(to bottom, transparent, #4ECEB3)'
+                        background: 'linear-gradient(to bottom, rgba(1,50,32,0), #4ECEB3)'
                     }}
                 />
                 
                 {/* Content overlay */}
-                <div className="relative z-10 h-full flex flex-col items-center justify-center">
+                <div className="relative z-10 h-full flex flex-col items-start justify-center">
                     <Header />
-                    <div className="text-center -mt-52 px-4">
-                        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                            Flexible liquidity for emerging managers
+                    <div className="text-left -mt-60 md:-mt-40 max-w-[1400px] mx-auto w-full md:ml-[80px] lg:ml-[120px] px-3" style={{ marginTop: '-60px' }}>
+                        <h1 className="text-[50px] md:text-[60px] lg:text-[68px] font-bold text-white mb-6 leading-tight" style={{ marginTop: '120px', '@media (min-width: 768px)': { marginTop: '160px' } }}>
+                            Liquidity Solutions for Private Equity Investors & Professionals
                         </h1>
-                        <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto">
-                            Our credit solutions are designed for rising sponsors, supporting their growth while promoting alignment
+                        <p className="text-[20px] md:text-[24px] lg:text-[26px] text-white max-w-[1500px] leading-relaxed">
+                            We help individuals, independent sponsors, emerging & established managers, and limited partners unlock the value of their illiquid investments with flexible, non-dilutive credit.
                         </p>
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 max-w-[1400px] mx-auto w-full md:ml-[80px] lg:ml-[120px] px-3">
                         <button 
                             onClick={() => setIsModalOpen(true)}
-                            className="mt-8 px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 transform"
+                            className="mt-8 px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 transform"
                         >
-                            Contact Henry Capital
+                            Get Started
                         </button>
                     </div>
                 </div>
@@ -93,23 +96,19 @@ const HomePage = () => {
             <section 
                 className="relative w-full" 
                 style={{
-                    backgroundColor: '#4ECEB3'
+                    backgroundColor: '#EEECE3'
                 }}
             >
-                <div className="w-full">
-                    <SecondSection />
-                    <Divider />
-                    <ThirdSection />
-                    <Divider />
-                    <FourthSection />
-                    <Divider />
-                    <FifthSection />
-                    <Divider />
-                    <AboutSection />
-                    <Divider />
-                    <Contact />
-                    <Footer />
-                </div>
+                <ExperienceSection />
+                <ExperienceSection2 />
+                <SecondSection />
+                <Divider />
+                <ThirdSection />
+                <Divider />
+                <FourthSection />
+                <AboutSection />
+                <Contact />
+                <Footer />
             </section>
 
             {/* Modal */}

@@ -6,16 +6,18 @@ const AboutSection = () => {
     return (
         <section id="about-section" className="py-16 px-4 md:px-8 bg-[#2F4C44]">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-12 text-center">
+                <h2 className="text-4xl font-bold text-white mb-3 text-center">
                     About Us
                 </h2>
 
                 <div className="bg-white/8 backdrop-blur-sm rounded-lg p-8 mb-16 max-w-4xl mx-auto shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:bg-white/15 transition-all duration-300">
                     <p className="text-white/90 leading-relaxed mb-6">
-                        Henry commits its capital in flexible financings to investment managers against the value of their illiquid assets. Our preferred equity solution offers these professionals cash in exchange for a preferred interest in subsequent distributions. Our hybrid product draws from the latest advancements in finance to fill liquidity gaps and make markets more efficient.
+                    Henry Capital is a pure play liquidity provider for PE professionals and investors. Our goal is to be a strategic partner with our clients by reducing the liquidity mismatch that managers and investors experience as they grow their firms and portfolios. Accordingly, we are backed by permanent capital to provide liquidity regardless of the fundraising market.
+                    
+                    
                     </p>
                     <p className="text-white/90 leading-relaxed">
-                        Traditional lending options have not been a good fit for the needs of the lower and lower-middl- market.private investment managers. Due to idiosyncratic regulatory constraints and other structural factors, supply has contracted despite strong demand. After observing these inefficiencies first-hand, Henry's founders designed an asset-backed structure that properly captures this value and shares it with borrowers through flexible liquidity arrangements. Henry is an origination platform that bridges investors seeking differentiated exposure to the private markets with a way for GPs to maintain asset ownership and preserve upside with their LPs. We are a business built on trust, collaboraiton and alignment to address complexity.
+                    Having experienced this illiquidity ourselves, we understand the pain points and can find creative ways to help you achieve your goals. The loans have the option to accrue the interest until there are underlying distributions. We draw from asset-backed lending and hybrid practices to best tailor our products.
                     </p>
                 </div>
                 

@@ -1,80 +1,45 @@
 import React from 'react';
-import graphImage from '../Assets/Images/cash w henry.png';
 
 const ThirdSection = () => {
     return (
-        <section id="eligibility-section" className="py-16 px-4 md:px-8">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-12 text-center">
-                    Making markets stronger
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-white/8 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                        <h3 className="text-2xl font-semibold text-white mb-4">
-                            Borrower profile of Henry:
-                        </h3>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                                <h4 className="text-xl font-semibold text-white mb-2">
-                                    Individual partners
-                                </h4>
-                                <p className="text-white/90 leading-relaxed">
-                                    Entire GP need not participate
-                                </p>
-                            </div>
-                            
-                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                                <h4 className="text-xl font-semibold text-white mb-2">
-                                    Target strategies
-                                </h4>
-                                <p className="text-white/90 leading-relaxed">
-                                    PE (excl. VC) and RE / Infra
-                                </p>
-                            </div>
-                            
-                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                                <h4 className="text-xl font-semibold text-white mb-2">
-                                    Wide range of check sizes
-                                </h4>
-                                <p className="text-white/90 leading-relaxed">
-                                    As small as $500k to $5m+
-                                </p>
-                            </div>
-                            
-                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                                <h4 className="text-xl font-semibold text-white mb-2">
-                                    Current portfolio
-                                </h4>
-                                <p className="text-white/90 leading-relaxed">
-                                    A minimum of 3 or more existing investments
-                                </p>
-                            </div>
-                            
-                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                                <h4 className="text-xl font-semibold text-white mb-2">
-                                    Industry agnostic
-                                </h4>
-                                <p className="text-white/90 leading-relaxed">
-                                    Strong businesses and in any industry
-                                </p>
-                            </div>
-                            
-                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                                <h4 className="text-xl font-semibold text-white mb-2">
-                                    NA / UK geographies
-                                </h4>
-                                <p className="text-white/90 leading-relaxed">
-                                    Investments in US, CA or the UK
-                                </p>
-                            </div>
+        <section className="relative font-garamond">
+            <div className="absolute inset-0 bg-[#EEECE3]" />
+            <div className="relative z-10 py-8 px-4 md:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        {/* Left side - Title */}
+                        <div>
+                            <h2 className="text-4xl font-medium text-black max-w-sm">
+                                More flexible and efficient than other traditional lenders 
+                            </h2>
                         </div>
-                    </div>
-                    
-                    <div className="bg-white/8 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
-                        <div className="graph-container">
-                            <img src={graphImage} alt="Cumulative cash of GP over fund life" className="graph-image" />
+
+                        {/* Right side - Content */}
+                        <div className="max-w-xl pl-0 md:pl-4">
+                            <p className="text-xl text-black mb-8">
+                                The asset-based approach is focused on just the assets, without restrictive covenants on the borrowers or changes of control. This simplifies our underwriting  and allows us to address a variety of use cases and needs.
+                            </p>
+
+                            <div className="bg-white/8 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)]">
+                                <ul className="space-y-6">
+                                    <li className="text-black">
+                                        <span className="font-semibold block mb-2">Check size</span>
+                                        Sweet spot in $500k - $3m+, with room to get up to $10-$15m 
+                                    </li>
+                                    <li className="text-black">
+                                        <span className="font-semibold block mb-2">Use case</span>
+                                        No restrictions. Common uses include capital calls, new deals & funds, or managing personal liquidity
+                                    </li>
+                                    <li className="text-black">
+                                        <span className="font-semibold block mb-2">Asset class</span>
+                                        PE (Buyout, Growth), RE (Core, Core+, Value-Add), Infrastructure and other niche assets 
+                                    </li>
+                                    <li className="text-black">
+                                        <span className="font-semibold block mb-2">Collateral package</span>
+                                        3 or more assets, ability to cross-collateralize among funds and asset classes 
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

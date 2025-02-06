@@ -12,6 +12,9 @@ module.exports = {
           700: '#1e3a8a', // blue-800
         }
       },
+      fontFamily: {
+        garamond: ['EB Garamond', 'Garamond', 'serif'],
+      },
     },
   },
   plugins: [],
