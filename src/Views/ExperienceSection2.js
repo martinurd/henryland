@@ -17,7 +17,7 @@ const ExperienceSection2 = () => {
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                     {/* Left Column */}
-                    <div className="flex items-center">
+                    <div className="flex items-center scroll-hidden" data-delay="1">
                         <h2 className="text-5xl font-light leading-tight">
                             Purpose-built for 
                             <br />the private markets.
@@ -25,7 +25,7 @@ const ExperienceSection2 = () => {
                     </div>
 
                     {/* Right Column */}
-                    <div className="flex items-center">
+                    <div className="flex items-center scroll-hidden" data-delay="2">
                         <p className="text-[22px] font-light leading-relaxed">
                             Loans with PIK interest, longer terms and no personal guarantees. Constructed to give managers liquidity while preserving upside and alingment.    
                         </p>

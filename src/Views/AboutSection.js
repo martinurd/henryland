@@ -1,52 +1,52 @@
 import React from 'react';
-import muPic1 from '../Assets/Images/ABpic.PNG';
-import muPic2 from '../Assets/Images/MUpic.PNG';
+import { ScrollReveal } from '../Components/ScrollReveal';
+import muPic1 from '../Assets/Images/credit.PNG';
+import muPic2 from '../Assets/Images/leverage.PNG';
 
 const AboutSection = () => {
     return (
-        <section id="about-section" className="py-16 px-4 md:px-8 bg-[#2F4C44]">
+        <section id="about-section" className="pt-16 pb-16 px-4 md:px-8 bg-[#2F4C44]">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-white mb-3 text-center">
-                    About Us
-                </h2>
+                <ScrollReveal>
+                    <h2 className="text-[34px] font-bold text-white mt-0 mb-3 text-center">
+                        About Us
+                    </h2>
+                </ScrollReveal>
 
-                <div className="bg-white/8 backdrop-blur-sm rounded-lg p-8 mb-16 max-w-4xl mx-auto shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] hover:bg-white/15 transition-all duration-300">
-                    <p className="text-white/90 leading-relaxed mb-6">
-                    Henry Capital is a pure play liquidity provider for PE professionals and investors. Our goal is to be a strategic partner with our clients by reducing the liquidity mismatch that managers and investors experience as they grow their firms and portfolios. Accordingly, we are backed by permanent capital to provide liquidity regardless of the fundraising market.
-                    
-                    
-                    </p>
-                    <p className="text-white/90 leading-relaxed">
-                    Having experienced this illiquidity ourselves, we understand the pain points and can find creative ways to help you achieve your goals. The loans have the option to accrue the interest until there are underlying distributions. We draw from asset-backed lending and hybrid practices to best tailor our products.
-                    </p>
-                </div>
+                <ScrollReveal>
+                    <div className="bg-white/10 rounded-lg p-6 mb-16 max-w-4xl mx-auto shadow-lg hover:bg-white/20 transition-all duration-300">
+                        <p className="text-lg leading-relaxed mb-8">
+                            <span className="henry-font">Henry Capital</span> is a pure play liquidity provider for PE professionals and investors. Our goal is to be a strategic partner with our clients by reducing the liquidity mismatch that managers and investors experience as they grow their firms and portfolios. Accordingly, we are backed by permanent capital to provide liquidity regardless of the fundraising market.
+                        </p>
+                        <p className="text-[18px] text-white/90 leading-relaxed">
+                        Having experienced this illiquidity ourselves, we understand the pain points and can find creative ways to help you achieve your goals. The loans have the option to accrue the interest until there are underlying distributions. We draw from asset-backed lending and hybrid practices to best tailor our products.
+                        </p>
+                    </div>
+                </ScrollReveal>
                 
                 <div className="flex flex-col items-center">
                     <div className="flex flex-col md:flex-row justify-center gap-16 mb-8">
                         {/* First founder */}
-                        <div className="flex flex-col items-center">
-                            <div className="relative w-[300px] h-[300px]">
-                                <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_40%,rgba(0,0,0,0.2)_100%)] rounded-lg"></div>
-                                <img 
-                                    src={muPic1} 
-                                    alt="Team member 1" 
-                                    className="w-[300px] h-[300px] object-cover rounded-lg grayscale"
-                                />
-                            </div>
-                            <div className="mt-4 w-[300px]">
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-xl font-semibold text-white">
+                        <ScrollReveal>
+                            <div className="flex flex-col items-center">
+                                <div className="w-[300px] h-[300px] overflow-hidden rounded-lg">
+                                    <img 
+                                        src={muPic1} 
+                                        alt="Austin Brady" 
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="mt-4 w-[300px]">
+                                    <h3 className="text-[20px] font-semibold text-white mb-2">
                                         Austin Brady
                                     </h3>
-                                    <div className="flex gap-3">
+                                    <div className="flex gap-4">
                                         <a 
                                             href="mailto:austin@henrycap.com?subject=Henry%20Capital%20Inquiry"
-                                            className="text-white hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
+                                            className="text-[16px] text-white hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
                                             aria-label="Email Austin Brady"
                                         >
-                                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z"/>
-                                            </svg>
+                                            austin@henrycap.com
                                         </a>
                                         <a 
                                             href="https://www.linkedin.com/in/austin-brady/" 
@@ -55,36 +55,36 @@ const AboutSection = () => {
                                             className="text-white hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
                                             aria-label="LinkedIn"
                                         >
-                                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                            <svg className="w-[20px] h-[20px]" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.68 1.68 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Second founder */}
-                        <div className="flex flex-col items-center">
-                            <img 
-                                src={muPic2} 
-                                alt="Team member 2" 
-                                className="rounded-lg w-[300px] h-[300px] object-cover grayscale"
-                            />
-                            <div className="mt-4 w-[300px]">
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-xl font-semibold text-white">
+                        <ScrollReveal>
+                            <div className="flex flex-col items-center">
+                                <div className="w-[300px] h-[300px] overflow-hidden rounded-lg">
+                                    <img 
+                                        src={muPic2} 
+                                        alt="Martin Urdapilleta" 
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="mt-4 w-[300px]">
+                                    <h3 className="text-[20px] font-semibold text-white mb-2">
                                         Martin Urdapilleta
                                     </h3>
-                                    <div className="flex gap-3">
+                                    <div className="flex gap-4">
                                         <a 
                                             href="mailto:martin@henrycap.com?subject=Henry%20Capital%20Inquiry"
-                                            className="text-white hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
+                                            className="text-[16px] text-white hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
                                             aria-label="Email Martin Urdapilleta"
                                         >
-                                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z"/>
-                                            </svg>
+                                            martin@henrycap.com
                                         </a>
                                         <a 
                                             href="https://www.linkedin.com/in/martin-urdapilleta/" 
@@ -93,14 +93,14 @@ const AboutSection = () => {
                                             className="text-white hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
                                             aria-label="LinkedIn"
                                         >
-                                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                            <svg className="w-[20px] h-[20px]" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.68 1.68 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                                             </svg>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </div>

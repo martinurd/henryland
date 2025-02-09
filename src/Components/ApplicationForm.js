@@ -159,8 +159,7 @@ const ApplicationForm = () => {
         return (
             <div className="application-form">
                 <div className="success-message">
-                    <h2>Thank you for your application!</h2>
-                    <p>We will review your submission and get back to you soon.</p>
+                    <h2>Successful!</h2>
                 </div>
             </div>
         );
@@ -182,7 +181,7 @@ const ApplicationForm = () => {
                     <div className="error">{errors[questions[currentStep].id]}</div>
                 )}
                 {submitStatus === 'error' && (
-                    <div className="error">There was an error submitting your application. Please try again.</div>
+                    <div className="error">There was an error submitting your message. Please try again.</div>
                 )}
             </div>
 

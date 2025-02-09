@@ -4,9 +4,7 @@ import emailjs from '@emailjs/browser';
 
 const ContactModal = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        selection: ''
+        message: ''
     });
     const [isActive, setIsActive] = useState(false);
 
@@ -35,7 +33,7 @@ const ContactModal = ({ isOpen, onClose }) => {
         )
         .then(() => {
             onClose();
-            setFormData({ name: '', email: '', selection: '' });
+            setFormData({ message: '' });
         })
         .catch((err) => {
             console.error('Failed to send email:', err);
@@ -43,7 +41,6 @@ const ContactModal = ({ isOpen, onClose }) => {
     };
 
     const handleBackgroundClick = (e) => {
-        // Close if clicking the overlay or modalContent (background)
         if (e.target.className.includes(styles.modalOverlay) || 
             e.target.className.includes(styles.modalContent)) {
             onClose();
@@ -64,48 +61,19 @@ const ContactModal = ({ isOpen, onClose }) => {
                     <p>Tell us about yourself, and the appropriate member of our team will be in contact shortly.</p>
                     <form onSubmit={handleSubmit}>
                         <div className={styles.inputGroup}>
-                            <label htmlFor="name">Name*</label>
-                            <input
-                                id="name"
-                                type="text"
-                                name="name"
-                                value={formData.name}
+                            <label htmlFor="message">Message*</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formData.message}
                                 onChange={handleChange}
-                                className={styles.input}
+                                className={styles.textarea}
                                 required
+                                rows="4"
                             />
-                        </div>
-                        <div className={styles.inputGroup}>
-                            <label htmlFor="email">Email*</label>
-                            <input
-                                id="email"
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className={styles.input}
-                                required
-                            />
-                        </div>
-                        <div className={styles.inputGroup}>
-                            <label htmlFor="selection">Which of the following best describes you or your firm?</label>
-                            <select
-                                id="selection"
-                                name="selection"
-                                value={formData.selection}
-                                onChange={handleChange}
-                                className={styles.select}
-                                required
-                            >
-                                <option value="">Select an option</option>
-                                <option value="Seeking capital">Seeking capital</option>
-                                <option value="Institutional provider of capital">Institutional provider of capital</option>
-                                <option value="Deposit-taking institution">Deposit-taking institution</option>
-                                <option value="Other">Other</option>
-                            </select>
                         </div>
                         <button type="submit" className={styles.submitButton}>
-                            Submit
+                            Send Message
                         </button>
                     </form>
                 </div>
