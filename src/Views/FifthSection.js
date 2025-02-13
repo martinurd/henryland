@@ -2,7 +2,7 @@ import React from 'react';
 
 const FifthSection = () => {
     return (
-        <section className="py-12 px-4 md:px-8 bg-[#EEECE3] font-garamond">
+        <section className="py-8 px-4 md:px-8 bg-[#EEECE3] font-garamond">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl font-bold text-black mb-12 text-center henry-font-bold">What makes Henry Capital different?</h2>
                 <div className="bg-white/8 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] mb-12 max-w-4xl mx-auto">

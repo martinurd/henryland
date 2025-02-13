@@ -16,8 +16,7 @@ const Header = () => {
         if (section) {
           const offset = 80;
           const elementPosition = section.getBoundingClientRect().top;
-          const elementHeight = sectionId === 'contact-section' ? section.offsetHeight : 0;
-          const offsetPosition = elementPosition + window.pageYOffset - offset + elementHeight;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
 
           window.scrollTo({
             top: offsetPosition,
@@ -30,8 +29,7 @@ const Header = () => {
       if (section) {
         const offset = 80;
         const elementPosition = section.getBoundingClientRect().top;
-        const elementHeight = sectionId === 'contact-section' ? section.offsetHeight : 0;
-        const offsetPosition = elementPosition + window.pageYOffset - offset + elementHeight;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
 
         window.scrollTo({
           top: offsetPosition,
@@ -74,7 +72,7 @@ const Header = () => {
                 <img
                   src={logo}
                   alt="Henry Capital"
-                  className={`h-12 ${styles.logo}`}
+                  className={`h-10 ${styles.logo}`}
                 />
               </Link>
             </div>
@@ -84,26 +82,26 @@ const Header = () => {
             <div className={`hidden md:flex items-center justify-end space-x-6 ${styles.buttonContainer}`}>
               <button
                 onClick={() => scrollToSection('about-section')}
-                className="text-white text-[18px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
+                className="text-white text-[22px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
               >
                 About Us
               </button>
               <button
                 onClick={() => scrollToSection('eligibility-section')}
-                className="text-white text-[18px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
+                className="text-white text-[22px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
               >
                 Eligibility
               </button>
               <Link
                 to="/faqs"
-                className="text-white text-[18px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
+                className="text-white text-[22px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
                 onClick={() => trackEvent('faq_nav_click')}
               >
                 FAQs
               </Link>
               <button
                 onClick={() => scrollToSection('contact-section')}
-                className="text-white text-[17px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
+                className="text-white text-[22px] hover:text-gray-300 transition-colors hover:scale-110 transform transition-transform duration-200"
               >
                 Contact Us
               </button>

@@ -52,7 +52,7 @@
   z-index: 9999 !important; /* Much higher z-index */
   width: 100% !important;
   height: auto !important;
-  min-height: 85px !important;
+  min-height: 55px !important;
   margin: 0 !important;
   padding: 0 !important;
   pointer-events: all !important;
@@ -61,7 +61,7 @@
 .headerContent {
   position: relative; /* Ensure content sits above the blur */
   z-index: 10000 !important; /* Higher than headerAbsolute */
-  padding: 1rem 0.75rem !important;
+  padding: 0.65rem 0.75rem !important;
   pointer-events: all !important;
 }
 
