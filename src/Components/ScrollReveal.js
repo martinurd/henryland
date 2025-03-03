@@ -8,7 +8,10 @@ export const ScrollReveal = ({ children, className = '' }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
+                        // Add a class without relying on state
                         entry.target.classList.add('animate-reveal');
+                        // Once revealed, stop observing
+                        observer.unobserve(entry.target);
                     }
                 });
             },

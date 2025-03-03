@@ -1,11 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -16,13 +13,23 @@ const firebaseConfig = {
   measurementId: "G-CNYY36G4FE"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// Initialize Firebase only on client side
+let app;
+let analytics;
+
+if (typeof window !== 'undefined') {
+  app = initializeApp(firebaseConfig);
+  // Initialize analytics only in production and on client side
+  if (process.env.NODE_ENV === 'production') {
+    analytics = getAnalytics(app);
+  }
+}
 
 // Analytics event tracking helper
 export const trackEvent = (eventName, eventParams = {}) => {
-  logEvent(analytics, eventName, eventParams);
+  if (analytics && process.env.NODE_ENV === 'production') {
+    logEvent(analytics, eventName, eventParams);
+  }
 };
 
 export { analytics };

@@ -1,14 +1,14 @@
 .logoContainer {
-    position: relative;
-    z-index: 10001 !important; /* Same as buttonContainer */
-    padding-left: calc(var(--original-padding, 2px) * 0.1);
-    pointer-events: all !important;
+  position: relative;
+  z-index: 10001 !important; /* Same as buttonContainer */
+  padding-left: calc(var(--original-padding, 2px) * 0.1);
+  pointer-events: all !important;
 }
 
 .buttonContainer {
   position: relative;
   z-index: 10001 !important; /* Higher than headerContent */
-  display: flex;
+  /* display: flex; <-- REMOVED to avoid conflicts with "hidden md:flex" */
   gap: 20px;
   justify-content: flex-end;
   padding-right: 20px;
@@ -23,13 +23,13 @@
 }
 
 .headerLine {
-    position: relative;
-    z-index: 10000 !important;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-top: 1rem;
-    margin-left: calc(var(--original-padding, 2px) * 0.1);
-    margin-right: calc(var(--original-padding, 2px) * 0.1);
+  position: relative;
+  z-index: 10000 !important;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+  margin-left: calc(var(--original-padding, 2px) * 0.1);
+  margin-right: calc(var(--original-padding, 2px) * 0.1);
 }
 
 .headerBackground {
@@ -79,6 +79,7 @@
   pointer-events: all !important;
 }
 
+/* Contact Form Styles (unchanged) */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -131,4 +132,20 @@
 .logoContainer *,
 .buttonContainer * {
   pointer-events: all !important;
+}
+
+/* Mobile Menu Styling */
+.mobileMenu {
+  margin-top: 1rem;
+  /* display: flex; <-- REMOVED to avoid conflicts with "md:hidden" */
+  padding: 0 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .mobileMenu button,
+  .mobileMenu a {
+    font-size: 18px;
+    padding: 8px 0;
+  }
 }

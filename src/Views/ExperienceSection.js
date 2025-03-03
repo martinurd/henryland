@@ -5,11 +5,6 @@ import React from 'react';
  * 
  * This section is designed with a green gradient background and 
  * contains information tailored for the lower-mid-market audience.
- * It features a two-column layout with a prominent heading and 
- * descriptive paragraph explaining the benefits of asset-based loans 
- * with PIK interest, longer terms, and no personal guarantees. 
- * The section is styled with bold typography and a font size 
- * adjustment for responsive design.
  */
 const ExperienceSection = () => {
     return (
