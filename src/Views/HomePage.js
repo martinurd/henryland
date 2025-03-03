@@ -7,7 +7,7 @@ import FourthSection from './FourthSection';
 import Contact from './Contact';
 import Footer from './Footer';
 import ExperienceSection from './ExperienceSection';
-import AboutSection from './AboutSection';
+import SimpleAboutSection from './SimpleAboutSection';
 import Divider from '../Components/Divider';
 import { trackEvent } from '../firebase';
 import backgroundVideo from '../Assets/Videos/backgroundvideo.mp4';
@@ -107,7 +107,7 @@ const HomePage = () => {
         <ThirdSection />
         <Divider />
         <FourthSection />
-        <AboutSection />
+        <SimpleAboutSection />
         <Contact />
         <Footer />
       </section>
